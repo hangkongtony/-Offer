@@ -16,7 +16,14 @@ public class FindinDoubleArray001 {
 		System.out.println(Find(a, 0));
 	}
 		
-
+		/**
+		 * 由于题目条件的成立，所以使得这道题可以使用对角线的方法完成，可以从右上角的元素考虑，
+		 * 如果目标查找元素小于右上角的元素，那么不可能在右上角元素所在的列，如果目标大于剩余列
+		 * 的右上角的元素，那么不可能在该右上角元素所在的行。
+		 * @param array
+		 * @param target
+		 * @return
+		 */
 	public static boolean Find(int [][] array,int target) {
 		boolean found = false;
 		outer:while(array!=null)
